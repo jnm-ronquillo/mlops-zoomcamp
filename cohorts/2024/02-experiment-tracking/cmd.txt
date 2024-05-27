@@ -1,0 +1,4 @@
+#Q3
+mlflow ui --backend-store-uri sqlite:///data/mlflow.db
+#Q4
+mlflow server --backend-store-uri sqlite:///data/backend.db --default-artifact-root ./artifacts
