@@ -86,7 +86,7 @@ def run_register_model(data_path: str, top_n: int):
 
     # transition
     # latest_versions = client.get_latest_versions(name=model_name)
-    client.set_registered_model_alias(model_name, alias="development", version=1)
+    client.set_registered_model_alias(model_name, alias="development", version="1")
 
 
 if __name__ == '__main__':
