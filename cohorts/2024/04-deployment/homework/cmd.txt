@@ -1,0 +1,2 @@
+docker build -t hw04 .
+docker run -it --rm hw04 2023 5
