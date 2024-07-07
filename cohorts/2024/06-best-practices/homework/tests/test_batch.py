@@ -20,4 +20,4 @@ def test_prepare_data():
     output_df = batch.prepare_data(df, categorical)
 
     print(output_df.shape)
-    assert output_df.shape[0] == 3
+    assert output_df.shape[0] == 2

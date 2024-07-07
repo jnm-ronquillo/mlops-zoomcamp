@@ -1,0 +1,16 @@
+export AWS_ACCESS_KEY_ID='fdsfdfsf'
+export AWS_SECRET_ACCESS_KEY='fdsfdfsf'
+
+aws --endpoint-url=http://localhost:4566 s3 mb s3://nyc-duration
+aws --endpoint-url=http://localhost:4566 s3 ls
+
+export INPUT_FILE_PATTERN="s3://nyc-duration/in/{year:04d}-{month:02d}.parquet"
+export OUTPUT_FILE_PATTERN="s3://nyc-duration/out/{year:04d}-{month:02d}.parquet"
+
+pip install s3fs
+
+python tests/integration_test.py
+
+aws --endpoint-url=http://localhost:4566 s3 ls nyc-duration/in/
+
+python batch.py 2023 01 
